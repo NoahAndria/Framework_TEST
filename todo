@@ -1,0 +1,37 @@
+les taches a faire:
+
+fonction verifiCations:
+    [ok] -verifier si le cheque est vole (il y a tableau de id cheque vole)
+    [ok] -verifier si la date est correcte
+    [ok] -verifier si le compte est actif ou non
+    [ok]-verifier si il a assez d'argent
+    -verifier si le destinataire est correct
+
+    TABLE mouvements
+    id
+    numeroCompte
+    date
+    type (credit ou debit debit etant un retrait)
+    montant
+
+    TABLE cheque
+    id
+    numerocheque
+    numeroCompte
+    datevalidite
+
+    TABLE etatcheque
+    id
+    etat (ok, vole)
+
+    TABLE cheque etat
+    id
+    idcheque
+    idetat
+    date
+    porteur
+
+    si cheque existe [ok]
+    exception si cheque incorrect (date ou autre) [ok]
+    verifier si cheque vole ou deja encaisse [ok]
+    solde
