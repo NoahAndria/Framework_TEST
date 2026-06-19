@@ -1,3 +1,3 @@
-javac -cp "compilelib/*" -d classes/ src/main/java/*.java
+javac -cp "lib/*" -d classes/ src/main/java/*.java
 
 

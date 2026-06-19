@@ -39,6 +39,7 @@ cd ..
 
 # Déploiement dans Tomcat
 cp -f $BUILD_DIR/$APP_NAME.war $TOMCAT_WEBAPPS/
+# cp -f $BUILD_DIR $TOMCAT_WEBAPPS
 
 echo ""
 

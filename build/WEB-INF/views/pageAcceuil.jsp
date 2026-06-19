@@ -20,3 +20,18 @@
 
         </div>
     </div>
+
+        <%
+        List<String> cnames = (ArrayList<String>) request.getAttribute("liste");
+        if (cnames != null && !cnames.isEmpty()) {
+            for (String s : cnames) {
+    %>
+            
+                <div class="card" style="margin-top:20px;text-align:center;">
+                    <p><%= s %></p>
+                </div>
+    <%
+    
+            }
+        }
+    %>
