@@ -2,6 +2,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.time.*" %>
 <%@ page import="java.util.*" %>
+<%@ page import="myframework.utils.Mapping" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,17 +22,39 @@
         </div>
     </div>
 
-        <%
-        List<String> cnames = (ArrayList<String>) request.getAttribute("liste");
-        if (cnames != null && !cnames.isEmpty()) {
-            for (String s : cnames) {
-    %>
-            
-                <div class="card" style="margin-top:20px;text-align:center;">
-                    <p><%= s %></p>
-                </div>
-    <%
+
     
-            }
+    <%
+    List<Mapping> mappings = (ArrayList<Mapping>) request.getAttribute("mappings");
+    if (mappings != null && !mappings.isEmpty()) {
+        for (Mapping m : mappings) {
+            %>
+                <div class="card" style="margin-top:20px;text-align:center;">
+                    <p><%= m.getUrl() %></p>
+                    <p><%= m.getPackageName() %></p>
+                    <p><%= m.getMethodeName() %></p>
+                </div>
+            <%
+        }
+
+    }
+    %>
+
+    <%
+        Mapping mapping = (Mapping) request.getAttribute("mapping");
+        if(mapping != null) {
+    %>
+            <div class="card" style="margin-top:20px;text-align:center;">
+                <p><%= mapping.getUrl() %></p>
+                <p><%= mapping.getPackageName() %></p>
+                <p><%= mapping.getMethodeName() %></p>
+            </div>
+    <%
+        } else {
+    %>
+            <div class="card" style="margin-top:20px;text-align:center;">
+                <p>Aucune correspondance trouvée pour l'URL </p>
+            </div>
+    <%
         }
     %>
