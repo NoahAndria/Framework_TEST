@@ -11,4 +11,9 @@ public class Test2Controller {
     public String test() {
         return "test";
     }
+
+    @UrlMapping(name = "/andrana")
+    public String andrana() {
+        return "test";
+    }
 }
