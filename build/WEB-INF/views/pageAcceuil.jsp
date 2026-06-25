@@ -5,6 +5,7 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="myframework.utils.Mapping" %>
+<%@ page import="myframework.utils.UrlMethod" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,12 +28,13 @@
 
     
     <%
-    Map<String, Mapping> mappings = (Map<String , Mapping>) request.getAttribute("mappings");
+    Map<UrlMethod, Mapping> mappings = (Map<UrlMethod , Mapping>) request.getAttribute("mappings");
     if (mappings != null && !mappings.isEmpty()) {
-        for (Map.Entry<String, Mapping> m : mappings.entrySet()) {
+        for (Map.Entry<UrlMethod, Mapping> m : mappings.entrySet()) {
             %>
                 <div class="card" style="margin-top:20px;text-align:center;">
-                    <p><%= m.getKey() %></p>
+                    <p><%= m.getKey().getUrl() %></p>
+                    <p><%= m.getKey().getMethod() %></p>
                     <p><%= m.getValue().getPackageName() %></p>
                     <p><%= m.getValue().getMethodeName() %></p>
                 </div>
