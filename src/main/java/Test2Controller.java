@@ -7,12 +7,12 @@ import jdk.jfr.Category;
 @Controller
 public class Test2Controller {
 
-    @UrlMapping(name = "/youaregoodenough")
+    @UrlMapping(name = "/youaregoodenough", method="POST")
     public String test() {
         return "test";
     }
 
-    @UrlMapping(name = "/andrana")
+    @UrlMapping(name = "/andrana", method="GET")
     public String andrana() {
         return "test";
     }
