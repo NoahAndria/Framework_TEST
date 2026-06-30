@@ -50,6 +50,7 @@
     %>
             <div class="card" style="margin-top:20px;text-align:center;">
                 <p><%= request.getAttribute("url") %></p>
+                <p><%= request.getAttribute("method") %></p>
                 <p><%= mapping.getPackageName() %></p>
                 <p><%= mapping.getMethodeName() %></p>
             </div>
