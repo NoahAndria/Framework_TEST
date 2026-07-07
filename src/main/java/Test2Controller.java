@@ -20,4 +20,10 @@ public class Test2Controller {
 
         return "test";
     }
+    @UrlMapping(name = "/andrana", method="GET")
+    public String peepeepoopoo() {
+        System.out.println("\n test of test2controller in get ");
+
+        return "test";
+    }
 }
