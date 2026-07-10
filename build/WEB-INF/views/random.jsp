@@ -26,8 +26,19 @@
     </div>
 
 
-    
-    <%
+    <h1>Noms</h1>
+
+<%
+    List<String> names = (List<String>) request.getAttribute("names");
+
+    for(String name : names){
+%>
+    <p><%= name %></p>
+<%
+    }
+%>
+
+    <%-- <%
     Map<UrlMethod, Mapping> mappings = (Map<UrlMethod , Mapping>) request.getAttribute("mappings");
     if (mappings != null && !mappings.isEmpty()) {
         for (Map.Entry<UrlMethod, Mapping> m : mappings.entrySet()) {
@@ -62,4 +73,4 @@
             </div>
     <%
         }
-    %>
+    %> --%>
