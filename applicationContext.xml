@@ -8,11 +8,5 @@
             <property name="name" value="ITU"/>
         </bean>
 
-        <bean id="student" class="Student">
-            <property name="name" value="John"/>
-            <property name="number" value="1"/>
-            <property name="email" value="john@gmail.com"/>
-            <property name="ecole" ref="schule"/>
-        </bean>
         
 </beans>
