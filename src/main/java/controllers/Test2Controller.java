@@ -1,7 +1,7 @@
 package controllers;
 
-import annotations.Controller;
-import annotations.UrlMapping;
+import myframework.annotations.Controller;
+import myframework.annotations.UrlMapping;
 import jdk.jfr.Category;
 
 @Controller
