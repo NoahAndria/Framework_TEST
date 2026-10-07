@@ -1,37 +1,40 @@
 package entities;
 
 public class Jouet {
-    private String nom;
-    private double prix;
-    private String description;
+    private String nomJouet;
+    private double prixJouet;
+    private String descriptionJouet;
 
-    public Jouet(String nom, double prix, String description) {
-        this.nom = nom;
-        this.prix = prix;
-        this.description = description;
+    public Jouet() {
+    }
+    
+    public Jouet(String nomJouet, double prixJouet, String descriptionJouet) {
+        this.nomJouet = nomJouet;
+        this.prixJouet = prixJouet;
+        this.descriptionJouet = descriptionJouet;
     }
 
-    public String getNom() {
-        return nom;
+    public String getNomJouet() {
+        return nomJouet;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNomJouet(String nomJouet) {
+        this.nomJouet = nomJouet;
     }
 
-    public double getPrix() {
-        return prix;
+    public double getPrixJouet() {
+        return prixJouet;
     }
 
-    public void setPrix(double prix) {
-        this.prix = prix;
+    public void setPrixJouet(double prixJouet) {
+        this.prixJouet = prixJouet;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescriptionJouet() {
+        return descriptionJouet;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescriptionJouet(String descriptionJouet) {
+        this.descriptionJouet = descriptionJouet;
     }
 }
