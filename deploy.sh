@@ -17,7 +17,7 @@ mkdir -p $BUILD_DIR/WEB-INF/classes
 find $SRC_DIR -name "*.java" > sources.txt
 cp -r ./lib $BUILD_DIR/WEB-INF/
 
-javac -cp "lib/*" -d $BUILD_DIR/WEB-INF/classes @sources.txt
+javac -parameters -cp "lib/*" -d $BUILD_DIR/WEB-INF/classes @sources.txt
 #rm sources.txt
 
 # Copier les fichiers web (web.xml, JSP, etc.) 
